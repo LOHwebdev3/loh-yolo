@@ -15,7 +15,7 @@ from itertools import groupby
 from datetime import datetime, timedelta
 
 # 📂 ตั้งค่าไฟล์วิดีโอและโมเดล
-video_path = "C:/Users/loh-ai/Videos/13.mp4"
+video_path = "C:/Users/loh-ai/Videos/15.mp4"
 model_path = "runs/detect/train14/weights/best.pt"
 
 def folder_check():
@@ -77,15 +77,7 @@ def addHour(_hr):
     return new_time_str
 
 if __name__ == '__main__':
-    folder_check()
-    name = generate_unique_string(18)
-    SplitVideo().hr(name=name,vdo_path=video_path,number_hr=1)
-    folder_path = f"tmp/split_vdo/{name}"
-    process_folder(name=name, model_path=model_path)
-    print(f"output : tmp/vdo_output/{name}")
-
-
-    csv_folder = f'tmp/vdo_output/{name}'
+    csv_folder = f'tmp/vdo_output/IoRrXXLxdKa2JXAGAD'
     # List all CSV files in the folder
     csv_files = [file for file in os.listdir(csv_folder) if file.endswith(".csv")]
 
